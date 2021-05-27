@@ -1,7 +1,10 @@
 name: Staging
 
 on:
-  workflow_dispatch:
+    push:
+        branches: [ staging ]
+    
+    workflow_dispatch:
 
 jobs:
 
@@ -22,4 +25,4 @@ jobs:
           script: |
             cd /var/www/demo/cicd_staging
             git checkout -f 
-            git pull origin master
+            git pull origin staging

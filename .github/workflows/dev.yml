@@ -2,9 +2,9 @@ name: Development
 
 on:
   push:
-    branches: [ master ]
+    branches: [ dev-master ]
   pull_request:
-    branches: [ master ]
+    branches: [ dev-master ]
 
 jobs:
 
@@ -25,4 +25,4 @@ jobs:
           script: |
             cd /var/www/demo/cicd_dev
             git checkout -f 
-            git pull origin master
+            git pull origin dev-master
